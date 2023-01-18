@@ -1,0 +1,6 @@
+file(GLOB SRCS *.cpp)
+add_executable(test_chess_neuralnet ${SRCS})
+target_link_libraries(test_chess_neuralnet chess_neuralnet)
+target_link_libraries(test_chess_neuralnet libgtest)
+target_link_libraries(test_chess_neuralnet libgmock)
+add_test(NAME chess_neuralnet_tests COMMAND test_chess_neuralnet)
